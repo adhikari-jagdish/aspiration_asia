@@ -1,10 +1,10 @@
 import 'package:aspirationasia/utils/integers.dart';
-import 'package:aspirationasia/utils/strings.dart';
+import 'package:aspirationasia/view/home/widgets/adventures.dart';
 import 'package:aspirationasia/view/home/widgets/popular_destinations.dart';
 import 'package:aspirationasia/view/home/widgets/services.dart';
 import 'package:flutter/material.dart';
 
-import 'file:///E:/Projects/AspirationAsia/aspiration_asia/lib/view/home/widgets/promotion_carousel.dart';
+import 'widgets/promotion_carousel.dart';
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
@@ -17,7 +17,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -55,6 +54,26 @@ class _HomeState extends State<Home> {
                   height: Integers.SIZE_TEN,
                 ),
                 PopularDestinations(),
+                SizedBox(
+                  height: Integers.SIZE_TWENTY,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Adventurous Mood?',
+                      style: TextStyle(fontSize: Integers.SIZE_SIXTEEN),
+                    ),
+                    Text(
+                      'More',
+                      style: TextStyle(fontSize: Integers.SIZE_TWELVE),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: Integers.SIZE_TWENTY,
+                ),
+                Adventures()
               ],
             ),
           ),

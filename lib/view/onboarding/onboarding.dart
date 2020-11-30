@@ -1,8 +1,7 @@
 import 'package:aspirationasia/utils/constants.dart';
 import 'package:aspirationasia/utils/default_button.dart';
-import 'package:aspirationasia/view/primary.dart';
 import 'package:flutter/material.dart';
-
+import 'package:aspirationasia/view/login/login.dart';
 import 'onBoardingContent.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -76,7 +75,7 @@ class _OnBoarding extends State<OnBoarding> {
                       DefaultButton(
                         text: "Continue",
                         press: () {
-                          Navigator.pushNamed(context, Primary.routeName);
+                          Navigator.pushNamed(context, Login.routeName);
                         },
                       ),
                       Spacer(),

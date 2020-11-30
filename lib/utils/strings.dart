@@ -6,4 +6,8 @@ class Strings {
   static const String TITLE_BOOKINGS = "Bookings";
   static const String TITLE_WISHLIST = "Wishlist";
   static const String TITLE_PROFILE = "Profile";
+
+  //Saved Pref
+  static const String IS_LOGGED_IN = "is_logged_in";
+
 }

@@ -32,6 +32,18 @@ dependencies:
   provider: 4.3.2+2
   bottom_navy_bar: 5.5.0
   carousel_slider: ^2.3.1
+  simple_animations: ^2.1.1
+  equatable: ^1.2.5
+  flutter_bloc: ^6.1.1
+  bot_toast: ^3.0.5
+  shared_preferences: ^0.5.12+4
+  google_sign_in: ^4.5.6
+  flutter_facebook_login: ^3.0.0
+  firebase_auth: ^0.18.3+1
+  firebase_core: ^0.5.2+1
+  flutter_form_builder: ^3.14.1
+  font_awesome_flutter: ^8.10.0
+  flutter_screenutil: ^3.2.0
 
 dev_dependencies:
   flutter_test:

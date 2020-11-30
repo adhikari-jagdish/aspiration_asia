@@ -1,16 +1,20 @@
-import 'package:aspirationasia/routes/routes.dart';
-import 'package:aspirationasia/utils/constants.dart';
-import 'package:aspirationasia/view/splash.dart';
+import 'package:aspirationasia/aspiration_asia_root.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: Splash.routeName,
-    routes: routes,
-    theme: ThemeData(
-        accentColor: Colors.blueAccent,
-        primaryColor: Colors.blue,
-        fontFamily: 'Poppins'),
+import 'utils/system_utils.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  //SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+
+  SystemUtils().changeSystemBarColor();
+  SystemUtils().setOrientation();
+  SystemUtils().hideSystemUiOverlay();
+
+  runApp(AspirationAsiaRoot(
+
   ));
 }
