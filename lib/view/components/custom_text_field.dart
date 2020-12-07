@@ -32,7 +32,7 @@ class CustomTextField extends StatelessWidget {
     return FormBuilderTextField(
       //controller: textController,
       initialValue: initialValue,
-      attribute: attribute ?? 'text',
+      attribute: attribute,
       obscureText: obscureText ?? false,
       onChanged: onChange,
       validators: validators ??

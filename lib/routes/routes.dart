@@ -35,5 +35,11 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     return CustomPageRouteBuilder(
       widget: Home(),
     );
+  }else {
+    return CustomPageRouteBuilder(
+      widget: Container(
+        child: Text('No Route Found'),
+      ),
+    );
   }
 }
