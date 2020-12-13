@@ -5,6 +5,7 @@ class Integers {
   static const double SIZE_TWELVE = 12.0;
   static const double SIZE_SIXTEEN = 16.0;
   static const double SIZE_TWENTY = 20.0;
+  static const double SIZE_THIRTY = 30.0;
 
   static const double SIZE_SIXTYFOUR = 64.0;
   static const double SIZE_SEVENTY = 70.0;

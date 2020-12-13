@@ -1,7 +1,6 @@
 import 'package:aspirationasia/aspiration_asia_root.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'utils/system_utils.dart';
 
@@ -14,7 +13,6 @@ void main() async {
   SystemUtils().setOrientation();
   SystemUtils().hideSystemUiOverlay();
 
-  runApp(AspirationAsiaRoot(
 
-  ));
+  runApp(AspirationAsiaRoot());
 }

@@ -1,3 +1,4 @@
+import 'package:aspirationasia/bloc/dashboard/dashboard_cubit.dart';
 import 'package:aspirationasia/bloc/login/form/password_change_bloc.dart';
 import 'package:aspirationasia/bloc/login/form/username_change_bloc.dart';
 import 'package:bot_toast/bot_toast.dart';
@@ -12,6 +13,7 @@ import 'service/facebook_service/facebook_services.dart';
 import 'service/firebase_service/firebase_auth_services.dart';
 import 'utils/strings.dart';
 import 'view/splash.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AspirationAsiaRoot extends StatelessWidget {
   final SharedPreferences sharedPreferences;
@@ -22,6 +24,7 @@ class AspirationAsiaRoot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -40,6 +43,9 @@ class AspirationAsiaRoot extends StatelessWidget {
         BlocProvider(
           create: (_) => PasswordChangeBloc(),
         ),
+        BlocProvider(
+          create: (_) => DashboardCubit(),
+        ),
       ],
       child: MultiRepositoryProvider(
         providers: [
@@ -51,7 +57,7 @@ class AspirationAsiaRoot extends StatelessWidget {
           ),
           RepositoryProvider(
             create: (context) => _facebookServices,
-          )
+          ),
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
