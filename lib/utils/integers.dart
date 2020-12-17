@@ -1,4 +1,5 @@
 class Integers {
+  static const double SIZE_TWO = 2.0;
   static const double SIZE_FIVE = 5.0;
   static const double SIZE_EIGHT = 8.0;
   static const double SIZE_TEN = 10.0;

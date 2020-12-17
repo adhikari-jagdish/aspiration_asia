@@ -24,7 +24,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: Size(750, 1334), allowFontScaling: true);
+    ScreenUtil.init(context,
+        designSize: Size(750, 1334), allowFontScaling: true);
     return Scaffold(
       body: BlocBuilder<DashboardCubit, DashboardState>(
         builder: (context, dashboardState) {
@@ -55,13 +56,13 @@ class _HomeState extends State<Home> {
                 style: TextStyle(fontSize: Integers.SIZE_SIXTEEN),
               ),
               SizedBox(
-                height: Integers.SIZE_TEN,
+                height: Integers.SIZE_TWENTY,
               ),
               PromotionCards(
                 carouselResponse: dashboardResponse.carouselResponse,
               ),
               SizedBox(
-                height: Integers.SIZE_SIXTEEN,
+                height: Integers.SIZE_TWENTY,
               ),
               Text(
                 'Our Services',
@@ -83,7 +84,9 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: Integers.SIZE_TEN,
               ),
-              PopularDestinations(),
+              PopularDestinations(
+                destinationResponse: dashboardResponse.destinationResponse,
+              ),
               SizedBox(
                 height: Integers.SIZE_TWENTY,
               ),
@@ -101,7 +104,7 @@ class _HomeState extends State<Home> {
                 ],
               ),
               SizedBox(
-                height: Integers.SIZE_TWENTY,
+                height: Integers.SIZE_SIXTEEN,
               ),
               Adventures()
             ],

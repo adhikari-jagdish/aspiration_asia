@@ -6,6 +6,7 @@ import 'package:aspirationasia/view/wishlist/wishlist.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:aspirationasia/utils/custom_colour.dart';
 
 import 'home/home.dart';
 
@@ -46,7 +47,7 @@ class _PrimaryState extends State<Primary> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+   // SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
     return Scaffold(
       body: PageStorage(
         // child: pages[_selectedIndex],
@@ -70,20 +71,20 @@ class _PrimaryState extends State<Primary> {
           BottomNavyBarItem(
             icon: Icon(Icons.home),
             title: Text(Strings.TITLE_HOME),
-            activeColor: kPrimaryColor,
+            activeColor: CustomColor.welcomeBgColor,
           ),
           BottomNavyBarItem(
               icon: Icon(Icons.book_outlined),
               title: Text(Strings.TITLE_BOOKINGS),
-              activeColor: kPrimaryColor),
+              activeColor: CustomColor.welcomeBgColor),
           BottomNavyBarItem(
               icon: Icon(Icons.present_to_all),
               title: Text(Strings.TITLE_WISHLIST),
-              activeColor: kPrimaryColor),
+              activeColor: CustomColor.welcomeBgColor),
           BottomNavyBarItem(
               icon: Icon(Icons.perm_identity),
               title: Text(Strings.TITLE_PROFILE),
-              activeColor: kPrimaryColor),
+              activeColor: CustomColor.welcomeBgColor),
         ],
       );
 }

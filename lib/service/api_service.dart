@@ -23,11 +23,14 @@ class ApiService {
     try {
       List<Response> response = await Future.wait([
         _dio.get(BASE_URL + API_CAROUSEL),
-        _dio.get(BASE_URL + API_SERVICES)
+        _dio.get(BASE_URL + API_SERVICES),
+        _dio.post(BASE_URL + API_DESTINATIONS)
       ]);
       return DashboardResponse(
-          carouselResponse: CarouselResponse.fromJson(response[0].data),
-          serviceResponse: ServiceResponse.fromJson(response[1].data));
+        carouselResponse: CarouselResponse.fromJson(response[0].data),
+        serviceResponse: ServiceResponse.fromJson(response[1].data),
+        destinationResponse: DestinationResponse.fromJson(response[2].data),
+      );
     } catch (error, stacktrace) {
       print("Exception occurred in Dashboard: $error stackTrace: $stacktrace");
       return DashboardResponse.withError("$error");

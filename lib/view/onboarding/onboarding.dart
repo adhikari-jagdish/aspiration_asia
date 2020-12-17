@@ -1,7 +1,9 @@
 import 'package:aspirationasia/utils/constants.dart';
+import 'package:aspirationasia/utils/custom_colour.dart';
 import 'package:aspirationasia/utils/default_button.dart';
-import 'package:flutter/material.dart';
 import 'package:aspirationasia/view/login/login.dart';
+import 'package:flutter/material.dart';
+import 'package:sized_context/sized_context.dart';
 import 'onBoardingContent.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -38,7 +40,7 @@ class _OnBoarding extends State<OnBoarding> {
     return Scaffold(
       body: SafeArea(
         child: SizedBox(
-          width: double.infinity,
+          width: context.widthPx,
           child: Column(
             children: [
               Expanded(
@@ -97,7 +99,9 @@ class _OnBoarding extends State<OnBoarding> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        color: currentPage == index
+            ? CustomColor.welcomeTextColor
+            : Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(3.0),
       ),
     );

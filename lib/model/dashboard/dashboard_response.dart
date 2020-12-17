@@ -1,8 +1,10 @@
 class DashboardResponse {
   CarouselResponse carouselResponse;
   ServiceResponse serviceResponse;
+  DestinationResponse destinationResponse;
 
-  DashboardResponse({this.carouselResponse, this.serviceResponse});
+  DashboardResponse(
+      {this.carouselResponse, this.serviceResponse, this.destinationResponse});
 
   DashboardResponse.withError(String errorValue);
 }
@@ -70,5 +72,41 @@ class ServiceData {
     serviceName = json['serviceName'];
     serviceExcerpt = json['serviceExcerpt'];
     imageUrl = json['imageUrl'];
+  }
+}
+
+///Destination Response
+class DestinationResponse {
+  List<DestinationData> destinationData;
+
+  DestinationResponse({this.destinationData});
+
+  DestinationResponse.fromJson(Map<String, dynamic> json) {
+    if (json['data'] != null) {
+      destinationData = new List<DestinationData>();
+      json['data'].forEach((v) {
+        destinationData.add(new DestinationData.fromJson(v));
+      });
+    }
+  }
+}
+
+class DestinationData {
+  int destinationId;
+  String destinationName;
+  String imageUrl;
+  String createdDate;
+
+  DestinationData(
+      {this.destinationId,
+      this.destinationName,
+      this.imageUrl,
+      this.createdDate});
+
+  DestinationData.fromJson(Map<String, dynamic> json) {
+    destinationId = json['destinationId'];
+    destinationName = json['destinationName'];
+    imageUrl = json['imageUrl'];
+    createdDate = json['createdDate'];
   }
 }

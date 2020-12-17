@@ -14,8 +14,10 @@ class Services extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: context.widthPx,
-      height: 300,
       child: GridView.count(
+        mainAxisSpacing: Integers.SIZE_TEN,
+        crossAxisSpacing: Integers.SIZE_TEN,
+        childAspectRatio: Integers.SIZE_TWO,
         crossAxisCount: 2,
         physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -29,15 +31,13 @@ class Services extends StatelessWidget {
   Widget _serviceBody(BuildContext context, item) {
     return Container(
       width: context.widthPx / 2,
-      padding:
-          EdgeInsets.only(left: Integers.SIZE_EIGHT, right: Integers.SIZE_FIVE),
-      height: Integers.SIZE_SIXTYFOUR,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(Integers.SIZE_TWELVE),
         border: Border.all(color: Colors.black26, width: 1),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: 50.0,
