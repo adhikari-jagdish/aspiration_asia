@@ -42,7 +42,7 @@ dependencies:
   firebase_auth: ^0.18.3+1
   firebase_core: ^0.5.2+1
   flutter_form_builder: ^3.14.1
-  font_awesome_flutter: ^8.10.0
+  font_awesome_flutter: ^8.11.0
   flutter_screenutil: ^3.2.0
   sized_context: ^0.2.1+1
   dio: ^3.0.10

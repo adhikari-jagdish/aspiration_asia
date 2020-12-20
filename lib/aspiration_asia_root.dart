@@ -1,6 +1,7 @@
 import 'package:aspirationasia/bloc/dashboard/dashboard_cubit.dart';
 import 'package:aspirationasia/bloc/login/form/password_change_bloc.dart';
 import 'package:aspirationasia/bloc/login/form/username_change_bloc.dart';
+import 'package:aspirationasia/utils/route_constants.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -61,12 +62,11 @@ class AspirationAsiaRoot extends StatelessWidget {
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: Splash.routeName,
-          routes: routes,
+          onGenerateRoute: generateRoute,
+          initialRoute: RouteConstants.routeInitial,
           title: Strings.APP_NAME,
           theme: ThemeData(
-              accentColor: Colors.blueAccent,
-              primaryColor: Colors.blue,
+              primarySwatch: Colors.teal,
               fontFamily: 'Poppins'),
           builder: BotToastInit(),
           navigatorObservers: [BotToastNavigatorObserver()],

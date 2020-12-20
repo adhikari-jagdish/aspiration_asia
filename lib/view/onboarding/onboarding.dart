@@ -5,6 +5,7 @@ import 'package:aspirationasia/view/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:sized_context/sized_context.dart';
 import 'onBoardingContent.dart';
+import 'package:aspirationasia/utils/route_constants.dart';
 
 class OnBoarding extends StatefulWidget {
   static String routeName = "/onBoarding";
@@ -77,7 +78,10 @@ class _OnBoarding extends State<OnBoarding> {
                       DefaultButton(
                         text: "Continue",
                         press: () {
-                          Navigator.pushNamed(context, Login.routeName);
+                          Navigator.pushReplacementNamed(
+                            context,
+                            RouteConstants.routeHome,
+                          );
                         },
                       ),
                       Spacer(),

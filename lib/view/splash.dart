@@ -5,6 +5,7 @@ import 'package:aspirationasia/view/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:aspirationasia/utils/route_constants.dart';
 
 class Splash extends StatefulWidget {
   static String routeName = "/splash";
@@ -46,6 +47,6 @@ class _SplashState extends State<Splash> {
   }
 
   void navigationPage() {
-    Navigator.pushNamed(context, OnBoarding.routeName);
+    Navigator.pushReplacementNamed(context, RouteConstants.routeLogin);
   }
 }
