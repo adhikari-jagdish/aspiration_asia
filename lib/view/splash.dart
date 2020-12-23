@@ -26,7 +26,9 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    //SystemChrome.setEnabledSystemUIOverlays([]);
+    ScreenUtil.init(context,
+        designSize: Size(750, 1334), allowFontScaling: true);
     return Scaffold(
         backgroundColor: Colors.white,
         body: Center(

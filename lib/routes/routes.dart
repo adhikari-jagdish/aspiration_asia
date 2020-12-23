@@ -1,23 +1,13 @@
 import 'package:aspirationasia/utils/route_constants.dart';
 import 'package:aspirationasia/view/home/home.dart';
 import 'package:aspirationasia/view/login/login.dart';
-import 'package:aspirationasia/view/onboarding/onboarding.dart';
-import 'package:aspirationasia/view/primary.dart';
-import 'package:aspirationasia/view/signup/signup.dart';
 import 'package:aspirationasia/view/splash.dart';
 import 'package:aspirationasia/view/trip_packages/package_list.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_page_route_builder.dart';
-
-/*final Map<String, WidgetBuilder> routes = {
-  Splash.routeName: (BuildContext context) => Splash(),
-  Primary.routeName: (BuildContext context) => Primary(),
-  OnBoarding.routeName: (BuildContext context) => OnBoarding(),
-  Login.routeName: (BuildContext context) => Login(),
-  Signup.routeName: (BuildContext context) => Signup(),
-  RouteConstants.routeHome: (BuildContext context) => Home(),
-};*/
+import 'package:aspirationasia/view/trip_packages/package_details.dart';
+import 'package:aspirationasia/routes/custom_slide_route_builder.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   if (settings.name == RouteConstants.routeInitial) {
@@ -29,14 +19,18 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       widget: PackageList(),
     );
   } else if (settings.name == RouteConstants.routeLogin) {
-    return CustomPageRouteBuilder(
+    return CustomSlideRouteBuilder(
       widget: Login(),
     );
   } else if (settings.name == RouteConstants.routeHome) {
-    return CustomPageRouteBuilder(
+    return CustomSlideRouteBuilder(
       widget: Home(),
     );
-  }else {
+  }else if (settings.name == RouteConstants.routePackageDetails) {
+    return CustomSlideRouteBuilder(
+      widget: PackageDetails(),
+    );
+  } else {
     return CustomPageRouteBuilder(
       widget: Container(
         child: Text('No Route Found'),
