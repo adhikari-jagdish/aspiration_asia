@@ -38,7 +38,7 @@ class Login extends StatelessWidget {
                 BotToast.showText(text: state.errorMessage);
               } else if (state is SuccessLoginState) {
                 BotToast.closeAllLoading();
-                Navigator.pushReplacementNamed(context, RouteConstants.routeHome);
+                Navigator.pushReplacementNamed(context, RouteConstants.routeDashboard);
               } else if (state is LoadingLoginState) {
                 BotToast.showLoading();
               }

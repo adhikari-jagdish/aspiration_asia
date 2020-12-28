@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sized_context/sized_context.dart';
+import 'package:aspirationasia/view/trip_packages/widget/package_details_tabs.dart';
 
 class PackageDetails extends StatelessWidget {
   @override
@@ -101,7 +102,7 @@ class PackageDetails extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: Text('hhc'),
+                      child: PackageDetailsTabs()
                     ),
                   )
                 ],
